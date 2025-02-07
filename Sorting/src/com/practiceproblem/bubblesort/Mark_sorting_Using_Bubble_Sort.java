@@ -15,11 +15,11 @@ public class Mark_sorting_Using_Bubble_Sort {
     public static void bubbleSort(int marks[]){
         //outer loop take each time one element and compare with each element and place it in its correct palce
         for(int i=0;i<marks.length;i++){
-            for(int j=0;j<marks.length;j++){
-                if(marks[i]<marks[j]){
-                    int temp = marks[i];
-                    marks[i]=marks[j];
-                    marks[j]=temp;
+            for(int j=0;j<marks.length-i-1;j++){
+                if(marks[j]<marks[j+1]){
+                    int temp = marks[j];
+                    marks[j]=marks[j+1];
+                    marks[j+1]=temp;
                 }
             }
         }
