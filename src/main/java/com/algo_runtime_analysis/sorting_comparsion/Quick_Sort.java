@@ -24,11 +24,13 @@ public class Quick_Sort {
                 cnt++;
             }
         }
+        //calculating the current index of pivot element
         int pivotIndex = s+cnt;
         int temp = arr[s];
         arr[s]=arr[pivotIndex];
         arr[pivotIndex]=temp;
         int i=s,j=e;
+        //confirming the pivot element is placed at correct place
         while(i<pivotIndex && pivotIndex<j){
             while(i<pivot){
                 i++;

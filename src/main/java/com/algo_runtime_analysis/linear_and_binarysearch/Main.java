@@ -44,7 +44,8 @@ public class Main {
             long startTime = System.nanoTime();
             System.out.println("Linear Search Algorithm analysis for "+size[i]+" size array : ");
             LinerSearch ls = new LinerSearch();
-            ls.linerSearch(arr,target);
+           int index= ls.linerSearch(arr,target);
+            System.out.println("Found at index no : "+index);
             // storing end time
             long endTime = System.nanoTime();
             // printing time taken by linear search
@@ -56,7 +57,8 @@ public class Main {
             long startTime2 = System.nanoTime();
             System.out.println("Binary Search Algorithm analysis for "+size[i]+" size array : ");
             BinarySearch bs = new BinarySearch();
-            bs.binarySearch(arr,target);
+            index = bs.binarySearch(arr,target);
+            System.out.println("Found at index no : "+index);
             // storing end time for binary search
             long endTime2 = System.nanoTime();
             // printing time taken by binary search
