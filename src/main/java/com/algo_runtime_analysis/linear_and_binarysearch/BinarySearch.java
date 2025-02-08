@@ -1,0 +1,33 @@
+package com.algo_runtime_analysis.linear_and_binarysearch;
+
+public class BinarySearch {
+
+    // Method to perform Binary Search
+    public void binarySearch(int[] arr, int target) {
+        // Start index
+        int s = 0;
+        // End index
+        int e = arr.length - 1;
+
+        // running loop until condition does not match
+        while (s <= e) {
+            // finding mid element
+            int mid = s + (e - s) / 2;
+
+            // If the middle element is the target element return  mid
+            if (arr[mid] == target) {
+                System.out.println("Found at index no: " + mid);
+                // exit method
+                return;
+            }
+            // If the target is smaller than mid search in the right half
+            else if (arr[mid] > target) {
+                e = mid - 1;
+            }
+            // If the target is greater than mid search in the right half
+            else {
+                s = mid + 1;
+            }
+        }
+    }
+}
