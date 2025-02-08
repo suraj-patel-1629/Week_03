@@ -1,7 +1,7 @@
-package com.algo_runtime_analysis.searching_test_cases;
+package com.algoruntimeanalysis.searching_test_cases;
 
-import com.algo_runtime_analysis.linear_and_binarysearch.BinarySearch;
-import com.algo_runtime_analysis.linear_and_binarysearch.LinerSearch;
+import com.algoruntimeanalysis.linearandbinarysearch.BinarySearch;
+import com.algoruntimeanalysis.linearandbinarysearch.LinerSearch;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

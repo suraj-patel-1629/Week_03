@@ -20,7 +20,7 @@
 //        Expected Result:
 //        Binary Search performs much better for large datasets, provided data is sorted.
 
-package com.algo_runtime_analysis.linearandbinarysearch;
+package com.algoruntimeanalysis.linearandbinarysearch;
 
 import java.util.Random;
 

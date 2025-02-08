@@ -1,4 +1,4 @@
-package com.algo_runtime_analysis.linearandbinarysearch;
+package com.algoruntimeanalysis.linearandbinarysearch;
 
 public class BinarySearch {
 

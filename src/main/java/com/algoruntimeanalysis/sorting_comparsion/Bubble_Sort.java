@@ -1,4 +1,4 @@
-package com.algo_runtime_analysis.sorting_comparsion;
+package com.algoruntimeanalysis.sorting_comparsion;
 
 public class Bubble_Sort {
     public void bubbleSort(int []arr){
