@@ -45,7 +45,7 @@ public class Merge_Sort {
         // copying the sorted element back to array
         int k=0;
         for(int i=s;i<=e;i++){
-            arr[s]=temp[k++];
+            arr[i]=temp[k++];
         }
     }
 
