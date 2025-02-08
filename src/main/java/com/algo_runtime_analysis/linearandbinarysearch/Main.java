@@ -20,7 +20,7 @@
 //        Expected Result:
 //        Binary Search performs much better for large datasets, provided data is sorted.
 
-package com.algo_runtime_analysis.linear_and_binarysearch;
+package com.algo_runtime_analysis.linearandbinarysearch;
 
 import java.util.Random;
 
@@ -46,7 +46,7 @@ public class Main {
             LinerSearch ls = new LinerSearch();
            int index= ls.linerSearch(arr,target);
             System.out.println("Found at index no : "+index);
-            // storing end time
+            // storing end time of system
             long endTime = System.nanoTime();
             // printing time taken by linear search
             System.out.println("Time taken by linear search approch : "+(endTime-startTime)/1000000.0+" ms");
