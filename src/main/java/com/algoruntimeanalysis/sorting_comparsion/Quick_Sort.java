@@ -3,49 +3,56 @@ package com.algoruntimeanalysis.sorting_comparsion;
 
 
 public class Quick_Sort {
-    // method for quick sort
-    public  void quickSort(int []arr,int s,int e){
-        // comparing start and end index
-        if(s>=e){
+    public void quickSort(int[] arr, int s, int e) {
+        // Comparing start and end index
+        if (s >= e) {
             return;
         }
-        // calling partition method to get exact position of pivot element
-        int pivotIndex=partition(arr,s,e);
-       // applying quick sort for remaining element
-        quickSort(arr,s,pivotIndex-1);
-        quickSort(arr,pivotIndex+1,e);
+        // Calling partition method to get exact position of pivot element
+        int pivotIndex = partition(arr, s, e);
+        // Applying quick sort for remaining elements
+        quickSort(arr, s, pivotIndex - 1);
+        quickSort(arr, pivotIndex + 1, e);
     }
-    // partition method for calculating exact position of pivot element
-    public int partition(int []arr, int s ,int e){
-        int pivot=arr[s];
-        int cnt=0;
-        for(int i=s+1;i<=e;i++){
-            if(arr[i]<=pivot){
+
+    // Partition method for calculating exact position of pivot element
+    public int partition(int[] arr, int s, int e) {
+        int pivot = arr[s];  // Choosing first element as pivot
+        int cnt = 0;
+
+        // Counting how many elements are smaller than pivot
+        for (int i = s + 1; i <= e; i++) {
+            if (arr[i] <= pivot) {
                 cnt++;
             }
         }
-        //calculating the current index of pivot element
-        int pivotIndex = s+cnt;
+
+        // Calculating the current index of pivot element
+        int pivotIndex = s + cnt;
         int temp = arr[s];
-        arr[s]=arr[pivotIndex];
-        arr[pivotIndex]=temp;
-        int i=s,j=e;
-        //confirming the pivot element is placed at correct place
-        while(i<pivotIndex && pivotIndex<j){
-            while(i<pivot){
+        arr[s] = arr[pivotIndex];
+        arr[pivotIndex] = temp;
+
+        int i = s, j = e;
+
+        // Confirming the pivot element is placed at correct place
+        while (i < pivotIndex && j > pivotIndex) {
+            // Finding element greater than pivot on the left side
+            while (i < pivotIndex && arr[i] <= pivot) {
                 i++;
             }
-            while(j>pivot){
+            // Finding element smaller than pivot on the right side
+            while (j > pivotIndex && arr[j] > pivot) {
                 j--;
             }
-            if(i<pivotIndex && pivotIndex<j){
+            // Swapping elements to maintain correct order
+            if (i < pivotIndex && j > pivotIndex) {
                 int tem = arr[i];
-                arr[i]=arr[j];
-                arr[j]=tem;
+                arr[i] = arr[j];
+                arr[j] = tem;
             }
-
         }
-
+        // Returning pivot index for recursion
         return pivotIndex;
     }
 }
